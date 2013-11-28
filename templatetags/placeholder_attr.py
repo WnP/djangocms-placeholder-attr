@@ -8,7 +8,7 @@ from classytags.arguments import Argument, MultiValueArgument
 from classytags.helpers import InclusionTag
 from cms.utils import get_language_from_request, get_cms_setting
 from cms.utils.compat.type_checks import string_types
-from cms.models import Placeholder as PlaceholderModel
+#from cms.models import Placeholder as PlaceholderModel
 from cms.templatetags.cms_tags import (
     PlaceholderOptions,
     _get_placeholder,
@@ -48,8 +48,8 @@ def resolve_attr(plugin, plugin_attr):
 def get_placholder_attr(placeholder, name, plugin_class_name, plugin_attr):
     plugins = get_plugins(placeholder)
     if not plugins:
-        if settings.DEBUG:
-            raise Exception('No plugin set for Placeholder %s' % (name,))
+        #if settings.DEBUG:
+        #    raise Exception('No plugin set for Placeholder %s' % (name,))
         return ''
 
     plugin = resolve_plugin(plugins, plugin_class_name)
