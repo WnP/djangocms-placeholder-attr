@@ -2,10 +2,15 @@
 
 # Description
 
-`cms_placeholder_attr` allow you to call a plugin model attribute from a placeholder in [django-cms](https://github.com/divio/django-cms)
+`djangocms_placeholder_attr` allow you to call a plugin model attribute from a placeholder in [django-cms](https://github.com/divio/django-cms)
+
+# Depends
+
+- [django-cms](https://github.com/divio/django-cms)
 
 # Installation
-
+* Download the source and run `python setup.py install`
+* Put in your INSTALLED_APPS: `INSTALLED_APPS += ('djangocms-placeholder-attr', )` 
 
 
 # Usage
