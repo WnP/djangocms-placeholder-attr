@@ -2,7 +2,16 @@
 
 # Description
 
-`cms_placeholder_attr` allow you to call a plugin model attribute from a placeholder in [django-cms](https://github.com/divio/django-cms)
+`djangocms_placeholder_attr` allow you to call a plugin model attribute from a placeholder in [django-cms](https://github.com/divio/django-cms)
+
+# Depends
+
+- [django-cms](https://github.com/divio/django-cms)
+
+# Installation
+* Download the source and run `python setup.py install`
+* Put in your INSTALLED_APPS: `INSTALLED_APPS += ('djangocms-placeholder-attr', )` 
+
 
 # Usage
 
@@ -10,14 +19,16 @@
 
 - `placeholder_attr`
 
-```
+```django
 {% placeholder_attr 'placeholder_name' 'plugin_model_class_name' 'model_attribute_name' %}
 ```
 
 - `show_placeholder_attr`
 
-```
+```django
 {% show_placeholder_attr 'placeholder_name' 'placeholder_id' 'plugin_model_class_name' 'model_attribute_name' %}
 ```
+
+Be sure to have a placeholder named `placeholder_name` to use this plugin.
 
 if you have a foreign key attribute you can use the following syntax: `my_fk_attribute.an_attribute_from_the_fk`

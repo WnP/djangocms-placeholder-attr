@@ -7,7 +7,10 @@ from classytags.core import Options, Tag
 from classytags.arguments import Argument, MultiValueArgument
 from classytags.helpers import InclusionTag
 from cms.utils import get_language_from_request, get_cms_setting
-from cms.utils.compat.type_checks import string_types
+try:
+    from cms.utils.compat.type_checks import string_types
+except ImportError, e:
+    from django.utils.six import string_types
 #from cms.models import Placeholder as PlaceholderModel
 from cms.templatetags.cms_tags import (
     PlaceholderOptions,
@@ -15,7 +18,7 @@ from cms.templatetags.cms_tags import (
     get_site_id,
     _get_cache_key,
     _clean_key,
-    _restore_sekizai,
+    restore_sekizai_context as _restore_sekizai,
     _get_page_by_untyped_arg,
 )
 from cms.utils.placeholder import validate_placeholder_name
