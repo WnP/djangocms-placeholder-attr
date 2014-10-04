@@ -12,7 +12,7 @@ except (IOError, ImportError):
 
 setup(
     name='djangocms-placeholder-attr',
-    version='1.0.2',
+    version='1.0.3',
     license='MIT',
     description='Allow you to call a plugin model attribute from a placeholder in django-cms',
     long_description=description,
